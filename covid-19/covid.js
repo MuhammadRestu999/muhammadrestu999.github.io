@@ -19,7 +19,7 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
 };
 
 async function get(a, b, c, d) {
-  alert("Tunggu 5 detik...")
+  alert("Tunggu sebentar...")
   let { data } = await axios("https://hardianto-chan.herokuapp.com/api/info/covid?apikey=hardianto")
   let idn = data[0].indo
 
