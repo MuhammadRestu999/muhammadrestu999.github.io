@@ -1,0 +1,31 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.positif {
+  border-radius: 25px;
+  background: yellow;
+  color: #000000;
+  padding: 20px;
+  width: 250px;
+  height: 90px;
+}
+
+.sembuh {
+  border-radius: 25px;
+  background: lime;
+  color: #000000;
+  padding: 20px;
+  width: 250px;
+  height: 90px;
+}
+
+.meninggal {
+  border-radius: 25px;
+  background: red;
+  color: #000000;
+  padding: 20px;
+  width: 250px;
+  height: 90px;
+}

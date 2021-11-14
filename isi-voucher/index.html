@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Isi Voucher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1> Isi Voucher </h1>
+    <hr>
+    <nav>
+      <a href="/">Home</a> | <a href="/portal/">PortalNether</a> | <a href="/umur/">Hitung umur</a> | <a href="/randmath/">Random Math</a> | <a href="/passgen/">Password Generator</a> | <a href="/isi-voucher/" class="saiki">Isi Voucher</a> | <a href="/lirik/">Lirik Lagu</a> | <a href="/covid-19/"a>Covid-19</a>
+    </nav>
+    <hr>
+    <a href="#" id="isii" hidden="true"><button>Isi</button></a><br><br>
+    <select id="typ">
+      <option value="556">Im3</option>
+      <option value="838">Axis</option>
+      <option value="133">Telkomsel</option>
+      <option value="111">Three (3)</option>
+      <!-- <option value="556">Im3</option>
+      <option value="556">Im3</option> -->
+    </select>
+
+    <br><br>
+
+    Kode Voucher : <input type="number" id="v" placeholder="16 digit"><br><br>
+    <button onclick="isi(typ.value, v.value, isii)">Kirim</button>
+  </body>
+</html>

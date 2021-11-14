@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="covid.js"></script>
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Covid-19</title>
+  </head>
+  <body onload="get(pos, sem, men, up)">
+    <h1> Covid-19 </h1>
+    <hr>
+    <nav>
+      <a href="/">Home</a> | <a href="/portal/">PortalNether</a> | <a href="/umur/">Hitung umur</a> | <a href="/randmath/">Random Math</a> | <a href="/passgen/">Password Generator</a> | <a href="/isi-voucher/">Isi Voucher</a> | <a href="/lirik/">Lirik Lagu</a> | <a href="/covid-19/" class="saiki"a>Covid-19</a>
+    </nav>
+    <hr>
+    <h2>Terakhir diperbarui : <h3 id="up"></h3></h2>
+    <div class="box positif">
+      <h3>Positif</h3>
+      <p id="pos">0</p>
+    </div>
+    <div class="box sembuh">
+      <h3>Sembuh</h3>
+      <p id="sem">0</p>
+    </div>
+    <div class="box meninggal">
+      <h3>Meninggal</h3>
+      <p id="men">0</p>
+    </div>
+  </body>
+</htnl>

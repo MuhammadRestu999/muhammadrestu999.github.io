@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restu Web | /</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="/script.js"></script>
+    <script>
+      if(localStorage["nama"] == undefined || localStorage["nama"] == "" || localStorage["nama"] == "null") {
+        localStorage["nama"] = prompt("Masukan nama anda!\nProses 1 kali", "")
+        location.reload()
+      } else {
+        alert("Selamat datang " + localStorage["nama"] + "!")
+      }
+    </script>
+  </head>
+  <body onload="kopit();load()">
+    <h1> Home </h1>
+    <hr>
+    <nav>
+      <a href="/" class="saiki">Home</a> | <a href="/portal/">PortalNether</a> | <a href="/umur/">Hitung umur</a> | <a href="/randmath/">Random Math</a> | <a href="/passgen/">Password Generator</a> | <a href="/isi-voucher/">Isi Voucher</a> | <a href="/lirik/">Lirik Lagu</a> | <a href="/covid-19/"a>Covid-19</a>
+    </nav>
+    <hr>
+    <p>Selamat datang <span id="nama"></span>!</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>AYO LAKUKAN 3M : <span id="3m"></span></p>
+  </body>
+</html>
