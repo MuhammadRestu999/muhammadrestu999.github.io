@@ -1,11 +1,11 @@
-let covid = ["1. Menggunakan Masker", "2. Mencuci Tangan", "3. Menjaga Jarak"]
+let text = ["1. Menggunakan Masker", "2. Mencuci Tangan", "3. Menjaga Jarak", "4. Menjauhi kerumunan", "5. Membatasi mobilisasi"]
 
 i = 0
-function kopit() {
-  if(i > 2) i = 0
-  document.getElementById("3m").innerHTML = covid[i]
+function berubah() {
+  if(i > (text.length - 1)) i = 0
+  document.getElementById("5m").innerHTML = text[i]
   i++
-  setTimeout(kopit, 1500)
+  setTimeout(berubah, 1500)
 }
 
 function load() {
