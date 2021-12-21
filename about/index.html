@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./script.js"></script>
+    <script>
+      function hitung(value, o1, o2) {
+        let panjang = value.length || 0;
+        let baris = value.split(`
+`).length || 0;
+        o1.innerHTML = baris;
+        o2.innerHTML = panjang;
+      }
+    </script>
   </head>
   <body onload="eval(unescape(decodeURIComponent('if%28%28localStorage%255B%2522nama%2522%255D%29.toLowerCase%28%29.includes%28%2522rina%2522%29%29%2520%257B%250A%2520%2520document.getElementById%28%2522umr%2522%29.innerHTML%2520%253D%2520hitung%28%25222008-11-08%2522%29%250A%2520%2520document.getElementById%28%2522tl%2522%29.innerHTML%2520%253D%2520%25222008-11-08%2522%250A%257D%2520else%2520%257B%250A%250A%257D')))">
     <h1> About Me </h1>
@@ -32,7 +41,10 @@
     <p>Kirim Pesan :</p>
     <form action="https://api.whatsapp.com/send" methood="get">
       <input type="tel" value="6285783417029" name="phone" hidden>
-      <textarea name="text" rows="20" cols="40" placeholder="Pesan"></textarea><br><br>
+      <p>Length : <span id="lngth">0</span><br>
+         Line : <span id="line">0</span></p>
+      <br>
+      <textarea name="text" rows="20" cols="40" placeholder="Pesan" onkeyup="hitung(this.value, line, lngth)"></textarea><br><br>
       <button>Kirim</button>
     </form>
   </body>
