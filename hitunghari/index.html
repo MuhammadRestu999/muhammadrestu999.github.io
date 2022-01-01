@@ -5,23 +5,23 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="./nav.css">
+    <script src="/nav.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>Hari Berlalu</title>
+    <title>Restu web | /hitunghari/</title>
   </head>
-  <body onload="get(pos, sem, men, up)">
+  <body onload="loadNav()">
     <h1> Hari Berlalu </h1>
     <hr>
     <nav>
-      <a href="/">Home</a> | <a href="/about/">About me</a> | <a href="/portal/">Portal Nether</a> | <a href="/umur/">Hitung umur</a> | <a href="/randmath/">Random Math</a> | <a href="/passgen/">Password Generator</a> | <a href="/isi-voucher/">Isi Voucher</a> | <a href="/lirik/">Lirik Lagu</a> | <a href="/covid-19/">Covid-19</a> | <a href="hitunghari" class="saiki">Hitung Hari Berlalu</a>
     </nav>
     <hr>
     Tahun 1 : <input type="date" id="a"><br>
     Tahun 2 : <input type="date" id="b"><br>
     <br><br>
     <p id="result">
-      0 Tahun<br>
-      0 Bulan<br>
-      0 Hari<br>
+      00 Tahun<br>
+      00 Bulan<br>
+      00 Hari<br>
     </p>
     <button onclick="hitung(a.value, b.value, result)">Kirim</button>
   </body>

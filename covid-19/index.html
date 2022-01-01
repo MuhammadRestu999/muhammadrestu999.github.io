@@ -5,14 +5,14 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="covid.js"></script>
     <link rel="stylesheet" href="./nav.css">
+    <script src="/nav.js"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Covid-19</title>
   </head>
-  <body onload="get(pos, sem, men, up)">
+  <body onload="get(pos, sem, men, up);loadNav()">
     <h1> Covid-19 </h1>
     <hr>
     <nav>
-      <a href="/">Home</a> | <a href="/about/">About me</a> | <a href="/portal/">Portal Nether</a> | <a href="/umur/">Hitung umur</a> | <a href="/randmath/">Random Math</a> | <a href="/passgen/">Password Generator</a> | <a href="/isi-voucher/">Isi Voucher</a> | <a href="/lirik/">Lirik Lagu</a> | <a href="/covid-19/" class="saiki"a>Covid-19</a> | <a href="hitunghari/">Hitung Hari Berlalu</a>
     </nav>
     <hr>
     <p style="font-size: 24px;">Terakhir diperbarui : <span id="up" style="font-size: 18.72px;"></span></h2>

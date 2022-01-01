@@ -1,6 +1,14 @@
-async function math(diff) {
+function math(diff) {
   let r1 = Math.floor(Math.random() * diff)
   let r2 = Math.floor(Math.random() * diff + 5)
+
+  do { r1 = Math.floor(Math.random() * diff); }
+  while(r1 < (diff - 10))
+
+  do { r2 = Math.floor(Math.random() * diff); }
+  while(r2 < (diff - 15))
+
+
 
   while(true) {
     btul = +prompt(`Berapa hasil dari ${r1} + ${r2}?`, "")
