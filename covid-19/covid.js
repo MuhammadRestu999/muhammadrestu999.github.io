@@ -18,7 +18,13 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
   return false;
 };
 
+
 async function get(a, b, c, d) {
+  if(!window.navigator.onLine) {
+    await alert("Tidak ada koneksi internet")
+    window.history.back()
+    return !1
+  }
   alert("Tunggu sebentar...")
   let { data } = await axios("https://restu-restapi.herokuapp.com/covid?country=indonesia")
   let result = data.result

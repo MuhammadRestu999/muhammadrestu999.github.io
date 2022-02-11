@@ -1,0 +1,14 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+table {
+  border-collapse: collapse;
+}
+th {
+  height: 50px;
+}
+td {
+  padding: 15px;
+}
