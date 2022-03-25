@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Restu web | /hitunghari/</title>
   </head>
-  <body onload="loadNav()">
+  <body onload="loadNav();let date = new Date();b.value = [date.getFullYear(), date.getMonth()+1, date.getDate()].map(v => String(v).padStart(2, '0')).join('-')">
     <h1> Hari Berlalu </h1>
     <hr>
     <nav>
