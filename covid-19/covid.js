@@ -1,16 +1,16 @@
 window.onerror = function (msg, url, lineNo, columnNo, error) {
-  var string = msg.toLowerCase();
-  var substring = "script error";
-  if (string.indexOf(substring) > -1){
-    alert('Script Error: See Browser Console for Detail');
+  let string = msg.toLowerCase();
+  let substring = "script error";
+  if (string.indexOf(substring) > -1) {
+    alert("Script Error: See Browser Console for Detail");
   } else {
-    var message = [
-      'Message: ' + msg,
-      'URL: ' + url,
-      'Line: ' + lineNo,
-      'Column: ' + columnNo,
-      'Error object: ' + JSON.stringify(error)
-    ].join(' - ');
+    let message = [
+      "Message: " + msg,
+      "URL: " + url,
+      "Line: " + lineNo,
+      "Column: " + columnNo,
+      "Error object: " + JSON.stringify(error)
+    ].join("\n");
 
     alert(message);
   }
@@ -21,20 +21,21 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
 
 async function get(a, b, c, d) {
   if(!window.navigator.onLine) {
-    await alert("Tidak ada koneksi internet")
-    window.history.back()
-    return !1
+    await alert("Tidak ada koneksi internet");
+    window.history.back();
+    return !1;
   }
-  alert("Tunggu sebentar...")
-  let { data } = await axios("https://restu-restapi.herokuapp.com/covid?country=indonesia")
-  let result = data.result
+  alert("Tunggu sebentar...");
+  $.get("https://restu-restapi.herokuapp.com/covid?country=indonesia", function(data, status) {
+    if(status != "success") return alert(status);
+    let result = data.result;
 
-  let { positif, sembuh, meninggal, diperbarui } = result
+    let { positif, sembuh, meninggal, diperbarui } = result;
 
-  alert("Done!")
-  a.innerHTML = positif
-  b.innerHTML = sembuh
-  c.innerHTML = meninggal
-  d.innerHTML = diperbarui
-
-}
+    alert("Done!");
+    a.innerHTML = positif;
+    b.innerHTML = sembuh;
+    c.innerHTML = meninggal;
+    d.innerHTML = diperbarui;
+  });
+};

@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./script.js"></script>
     <script>
-      function hitung(value, o1, o2) {
+      function hitung(ttl) {
+        let [th, bl, tg] = ttl.split("-");
+        let [thn, bln, tgl] = [new Date().getFullYear(), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12][new Date(). getMonth()], new Date().getDate()];
+
+        return bln >= bl && tgl >= tg ? thn - th : bl < bln ? thn - th : thn - th - 1
+      }
+
+      function hitungLength(value, o1, o2) {
         let panjang = value.length || 0;
         let baris = value.split(`
 `).length || 0;
@@ -44,7 +51,7 @@
       <p>Length : <span id="lngth">0</span><br>
          Line : <span id="line">0</span></p>
       <br>
-      <textarea name="text" rows="20" cols="40" placeholder="Pesan" onkeyup="hitung(this.value, line, lngth)"></textarea><br><br>
+      <textarea name="text" rows="20" cols="40" placeholder="Pesan" onkeyup="hitungLength(this.value, line, lngth)"></textarea><br><br>
       <button>Kirim</button>
     </form>
   </body>
